@@ -1,0 +1,16 @@
+def todo_list():
+    tasks = []
+    while True:
+        action = input("Add task (A), View tasks (V), Exit (E): ").upper()
+        if action == 'A':
+            task = input("Enter task: ")
+            tasks.append(task)
+        elif action == 'V':
+            for i, task in enumerate(tasks, 1):
+                print(f"{i}. {task}")
+        elif action == 'E':
+            break
+        else:
+            print("Invalid option")
+
+todo_list()
